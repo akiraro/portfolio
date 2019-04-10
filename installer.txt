@@ -1,0 +1,6 @@
+// main video
+https://www.youtube.com/watch?v=gYzHS-n2gqU&list=WL&index=16&t=212s
+
+// install node-sass on github
+https://github.com/sass/node-sass
+npm install node-sass
