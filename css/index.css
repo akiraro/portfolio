@@ -99,7 +99,7 @@ body {
   color: #ffffff;
   height: 100%;
   margin: 0;
-  font-family: "Raleway", sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-img {
     background: url(../img/background.jpg);
@@ -156,74 +156,6 @@ main {
     overflow: hidden; }
     main#home h1 {
       margin-top: 20vh; }
-
-.about-info {
-  display: grid;
-  grid-gap: 30px;
-  grid-template-areas: "topabout topabout topabout" "job1 job2 job3" "job4 job4 job4";
-  grid-template-columns: repeat(3, 1fr); }
-  .about-info .top-about {
-    background: #515151;
-    grid-area: topabout;
-    display: grid;
-    grid-template-areas: "bioimage bio bio";
-    grid-template-columns: repeat(3, 1fr); }
-  .about-info .bio-image {
-    grid-area: bioimage;
-    margin: auto;
-    border-radius: 50%;
-    border: #25a1f3 3px solid; }
-  .about-info .bio {
-    grid-area: bio;
-    font-size: 1.5rem; }
-  .about-info .job-1 {
-    grid-area: job1; }
-  .about-info .job-2 {
-    grid-area: job2; }
-  .about-info .job-3 {
-    grid-area: job3; }
-  .about-info .job-4 {
-    grid-area: job4;
-    text-align: center; }
-  .about-info .job {
-    background: #515151;
-    padding: 0.5rem;
-    border-bottom: #25a1f3 5px solid; }
-    .about-info .job h3 {
-      background: #373737;
-      text-align: center;
-      border: 1px #0b78c1 solid; }
-
-.projects {
-  display: grid;
-  grid-gap: 0.7rem;
-  grid-template-columns: repeat(3, 1fr); }
-  .projects img {
-    width: 100%;
-    border: 3px #fff solid; }
-    .projects img:hover {
-      opacity: 0.5;
-      border-color: #25a1f3;
-      transition: all 0.5s ease-out; }
-
-.boxes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-top: 1rem; }
-  .boxes div {
-    font-size: 2rem;
-    border: 3px #fff solid;
-    padding: 1.5rem 2.5rem;
-    margin-bottom: 3rem;
-    transition: all 0.5s ease-out; }
-    .boxes div:hover {
-      padding: 0.5rem 1.5rem;
-      background: #25a1f3;
-      color: #000000; }
-      .boxes div:hover span {
-        color: #000000; }
 
 .btn, .btn-dark, .btn-light {
   display: block;
@@ -293,3 +225,67 @@ main {
     margin-top: 10vh; }
   .projects {
     grid-template-columns: 1fr; } }
+
+body {
+  font-family: "Raleway", sans-serif;
+  height: 100vh;
+  color: #ccc;
+  overflow: hidden; }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%; }
+
+h1 {
+  font-size: 3.5rem; }
+
+.txt-type > .txt {
+  border-right: 0.2rem solid #777;
+  color: #25a1f3; }
+
+.line {
+  font-size: 2.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  font-weight: 200;
+  margin: 0; }
+
+.name {
+  color: #25a1f3; }
+
+.anim-typewriter {
+  /* animation : keyframes | total duration | smoothness | delay to start | iteration | normal vs reverse | idk */
+  animation: typewriter 500ms steps(40) 0s 1 normal both; }
+
+.anim-iam {
+  animation: typewriter 1s steps(40) 1s 1 normal both; }
+
+@keyframes typewriter {
+  from {
+    width: 0; }
+  to {
+    width: 13em; } }
+
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75); }
+  to {
+    border-right-color: transparent; } }
+
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 5rem; } }
+
+@media (max-width: 800px) {
+  .container {
+    padding: 0 1rem; }
+  h1 {
+    font-size: 3rem; } }
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 2.5rem; }
+  h2 {
+    font-size: 1.5rem; } }
