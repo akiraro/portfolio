@@ -58,14 +58,14 @@
       height: 250px;
       background: url("../img/portrait.jpg");
       border-radius: 50%;
-      border: solid 3px #25a1f3; }
+      border: solid 3px #33dee8; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 0.5s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
-      color: #25a1f3; }
+      color: #33dee8; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
@@ -77,7 +77,7 @@
     text-decoration: none;
     transition: all 0.5s ease-out; }
     .menu .nav-link:hover {
-      color: #25a1f3; }
+      color: #33dee8; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.1s; }
@@ -106,7 +106,7 @@ body {
     background-attachment: fixed;
     background-size: cover; }
     body#bg-img:after {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       right: 0;
@@ -140,7 +140,7 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #25a1f3; }
+  color: #33dee8; }
 
 main {
   padding: 4rem;
@@ -150,7 +150,7 @@ main {
     main .icons a {
       padding: 0.5rem; }
       main .icons a:hover {
-        color: #25a1f3;
+        color: #33dee8;
         transition: all 0.5s ease-out; }
   main#home {
     overflow: hidden; }
@@ -163,7 +163,7 @@ main {
   border: 0;
   margin-bottom: 0.3rem; }
   .btn:hover, .btn-dark:hover, .btn-light:hover {
-    background: #25a1f3;
+    background: #33dee8;
     color: #000000;
     transition: all 0.5s ease-out; }
 
@@ -188,7 +188,9 @@ main {
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .projects {
-    grid-template-columns: repeat(3, 1fr); } }
+    grid-template-columns: repeat(3, 1fr); }
+  .about-info .bar-color-base {
+    font-size: 0.7rem; } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -215,8 +217,11 @@ main {
     .menu-branding .potrait {
       background: url("../img/portrait_small.jpg"); }
   .about-info {
-    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
+    grid-template-areas: "topabout" "job1" "job2" "job3" "job4";
     grid-template-columns: 1fr; }
+    .about-info .top-about {
+      grid-template-areas: "bioimage" "bio" "progbar";
+      grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: repeat(2, 1fr); } }
 
@@ -243,7 +248,7 @@ h1 {
 
 .txt-type > .txt {
   border-right: 0.2rem solid #777;
-  color: #25a1f3; }
+  color: #33dee8; }
 
 .line {
   font-size: 2.5rem;
@@ -253,7 +258,7 @@ h1 {
   margin: 0; }
 
 .name {
-  color: #25a1f3; }
+  color: #33dee8; }
 
 .anim-typewriter {
   /* animation : keyframes | total duration | smoothness | delay to start | iteration | normal vs reverse | idk */
