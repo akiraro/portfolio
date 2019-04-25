@@ -58,14 +58,14 @@
       height: 250px;
       background: url("../img/portrait.jpg");
       border-radius: 50%;
-      border: solid 3px #25a1f3; }
+      border: solid 3px #33dee8; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 0.5s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
-      color: #25a1f3; }
+      color: #33dee8; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
@@ -77,7 +77,7 @@
     text-decoration: none;
     transition: all 0.5s ease-out; }
     .menu .nav-link:hover {
-      color: #25a1f3; }
+      color: #33dee8; }
 
 .nav-item:nth-child(1) {
   transition-delay: 0.1s; }
@@ -106,7 +106,7 @@ body {
     background-attachment: fixed;
     background-size: cover; }
     body#bg-img:after {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       right: 0;
@@ -123,7 +123,9 @@ h3 {
   h1.lg-heading,
   h2.lg-heading,
   h3.lg-heading {
-    font-size: 6rem; }
+    text-align: center;
+    font-size: 6rem;
+    border-bottom: 2px solid #33dee8; }
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
@@ -140,7 +142,7 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #25a1f3; }
+  color: #33dee8; }
 
 main {
   padding: 4rem;
@@ -150,7 +152,7 @@ main {
     main .icons a {
       padding: 0.5rem; }
       main .icons a:hover {
-        color: #25a1f3;
+        color: #33dee8;
         transition: all 0.5s ease-out; }
   main#home {
     overflow: hidden; }
@@ -166,16 +168,63 @@ main {
     background: #515151;
     grid-area: topabout;
     display: grid;
-    grid-template-areas: "bioimage bio bio";
+    grid-template-areas: "bioimage progbar progbar" "bio progbar progbar";
     grid-template-columns: repeat(3, 1fr); }
+  .about-info .bar-container {
+    grid-area: progbar;
+    align-self: center;
+    margin-right: 2px; }
+    .about-info .bar-container h3 {
+      text-align: center;
+      color: #33dee8; }
+    .about-info .bar-container .rotate-text {
+      text-align: center;
+      font-size: 2rem;
+      color: #33dee8; }
+  .about-info .bar-base {
+    position: relative;
+    height: 30px;
+    width: 100%;
+    color: #333;
+    background-color: #444;
+    margin-bottom: 5px; }
+  .about-info .bar-color-base {
+    position: absolute;
+    font-size: 1rem;
+    text-align: center;
+    height: 30px;
+    color: #fff;
+    background-color: #33dee8;
+    animation: progressBar 0.3s steps(200) 0s 1 normal both; }
+  .about-info .bar-color {
+    position: absolute;
+    margin-left: 15%;
+    text-align: center;
+    height: 30px;
+    color: #fff;
+    background-color: #129ba3;
+    animation: progressBar 1s steps(200) 0s 1 normal both; }
+
+@keyframes progressBar {
+  0% {
+    width: 0; } }
+
+@keyframes fade {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
   .about-info .bio-image {
     grid-area: bioimage;
     margin: auto;
     border-radius: 50%;
-    border: #25a1f3 3px solid; }
+    border: #33dee8 3px solid; }
   .about-info .bio {
+    margin: 1rem;
     grid-area: bio;
-    font-size: 1.5rem; }
+    font-size: 1rem; }
   .about-info .job-1 {
     grid-area: job1; }
   .about-info .job-2 {
@@ -188,11 +237,18 @@ main {
   .about-info .job {
     background: #515151;
     padding: 0.5rem;
-    border-bottom: #25a1f3 5px solid; }
+    border-bottom: #33dee8 5px solid; }
     .about-info .job h3 {
       background: #373737;
       text-align: center;
-      border: 1px #0b78c1 solid; }
+      border: 1px #15b0ba solid; }
+    .about-info .job h6 {
+      margin: 0.5rem;
+      font-weight: bolder;
+      font-size: 15px; }
+    .about-info .job .desc {
+      margin: 0.5rem;
+      font-size: 13px; }
 
 .projects {
   display: grid;
@@ -203,7 +259,7 @@ main {
     border: 3px #fff solid; }
     .projects img:hover {
       opacity: 0.5;
-      border-color: #25a1f3;
+      border-color: #33dee8;
       transition: all 0.5s ease-out; }
 
 .boxes {
@@ -220,7 +276,7 @@ main {
     transition: all 0.5s ease-out; }
     .boxes div:hover {
       padding: 0.5rem 1.5rem;
-      background: #25a1f3;
+      background: #33dee8;
       color: #000000; }
       .boxes div:hover span {
         color: #000000; }
@@ -231,7 +287,7 @@ main {
   border: 0;
   margin-bottom: 0.3rem; }
   .btn:hover, .btn-dark:hover, .btn-light:hover {
-    background: #25a1f3;
+    background: #33dee8;
     color: #000000;
     transition: all 0.5s ease-out; }
 
@@ -256,7 +312,9 @@ main {
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .projects {
-    grid-template-columns: repeat(3, 1fr); } }
+    grid-template-columns: repeat(3, 1fr); }
+  .about-info .bar-color-base {
+    font-size: 0.7rem; } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -283,8 +341,11 @@ main {
     .menu-branding .potrait {
       background: url("../img/portrait_small.jpg"); }
   .about-info {
-    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
+    grid-template-areas: "topabout" "job1" "job2" "job3" "job4";
     grid-template-columns: 1fr; }
+    .about-info .top-about {
+      grid-template-areas: "bioimage" "bio" "progbar";
+      grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: repeat(2, 1fr); } }
 

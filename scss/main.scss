@@ -24,7 +24,9 @@ h3 {
   font-weight: 400;
 
   &.lg-heading {
+    text-align: center;
     font-size: 6rem;
+    border-bottom: 2px solid $secondary-color;
   }
 
   &.sm-heading {
@@ -88,8 +90,72 @@ main {
     background: lighten($primary-color, 5);
     grid-area: topabout;
     display: grid;
-    grid-template-areas: "bioimage bio bio";
+    grid-template-areas:
+      "bioimage progbar progbar"
+      "bio progbar progbar";
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .bar-container {
+    grid-area: progbar;
+    align-self: center;
+    margin-right: 2px;
+    h3 {
+      text-align: center;
+      color: $secondary-color;
+    }
+
+    .rotate-text {
+      text-align: center;
+      font-size: 2rem;
+      color: $secondary-color;
+    }
+  }
+  .bar-base {
+    position: relative;
+    height: 30px;
+    width: 100%;
+    color: #333;
+    background-color: $primary-color;
+    margin-bottom: 5px;
+  }
+
+  .bar-color-base {
+    position: absolute;
+    font-size: 1rem;
+    text-align: center;
+    height: 30px;
+    color: #fff;
+    background-color: $secondary-color;
+    animation: progressBar 0.3s steps(200) 0s 1 normal both;
+  }
+
+  .bar-color {
+    position: absolute;
+    margin-left: 15%;
+    text-align: center;
+    height: 30px;
+    color: #fff;
+    background-color: darken($secondary-color, 20);
+    animation: progressBar 1s steps(200) 0s 1 normal both;
+  }
+
+  @keyframes progressBar {
+    0% {
+      width: 0;
+    }
+  }
+
+  @keyframes fade {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 
   .bio-image {
@@ -100,8 +166,9 @@ main {
   }
 
   .bio {
+    margin: 1rem;
     grid-area: bio;
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 
   .job-1 {
@@ -130,6 +197,17 @@ main {
       background: darken($primary-color, 5);
       text-align: center;
       border: 1px darken($secondary-color, 15) solid;
+    }
+
+    h6 {
+      margin: 0.5rem;
+      font-weight: bolder;
+      font-size: 15px;
+    }
+
+    .desc {
+      margin: 0.5rem;
+      font-size: 13px;
     }
   }
 }
