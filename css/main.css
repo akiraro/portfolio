@@ -204,18 +204,6 @@ main {
     color: #fff;
     background-color: #129ba3;
     animation: progressBar 1s steps(200) 0s 1 normal both; }
-
-@keyframes progressBar {
-  0% {
-    width: 0; } }
-
-@keyframes fade {
-  0% {
-    opacity: 1; }
-  50% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
   .about-info .bio-image {
     grid-area: bioimage;
     margin: auto;
@@ -235,6 +223,7 @@ main {
     grid-area: job4;
     text-align: center; }
   .about-info .job {
+    animation: boxExpand 0.5s steps(40) 0s 1 normal both;
     background: #515151;
     padding: 0.5rem;
     border-bottom: #33dee8 5px solid; }
@@ -249,6 +238,26 @@ main {
     .about-info .job .desc {
       margin: 0.5rem;
       font-size: 13px; }
+
+@keyframes progressBar {
+  0% {
+    width: 0; } }
+
+@keyframes fade {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes boxExpand {
+  from {
+    width: 0%;
+    height: 0%; }
+  to {
+    width: 100%;
+    height: 100%; } }
 
 .projects {
   display: grid;
@@ -346,6 +355,8 @@ main {
     .about-info .top-about {
       grid-template-areas: "bioimage" "bio" "progbar";
       grid-template-columns: 1fr; }
+    .about-info .bar-color-base {
+      font-size: 0.5rem; }
   .projects {
     grid-template-columns: repeat(2, 1fr); } }
 

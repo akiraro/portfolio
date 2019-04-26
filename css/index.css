@@ -222,6 +222,8 @@ main {
     .about-info .top-about {
       grid-template-areas: "bioimage" "bio" "progbar";
       grid-template-columns: 1fr; }
+    .about-info .bar-color-base {
+      font-size: 0.5rem; }
   .projects {
     grid-template-columns: repeat(2, 1fr); } }
 
