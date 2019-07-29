@@ -32,7 +32,6 @@ function toggleMenu() {
     showMenu = false;
   }
 }
-
 // About Rotating Test JS + JQuery //
 var terms = ["MySQL", "Python", "AWS", "Firebase", "Node.JS"];
 

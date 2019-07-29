@@ -11,11 +11,11 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="css/index.css" />
-    <title>Welcome to My Portfolio</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Project 1</title>
   </head>
 
-  <body id="bg-img">
+  <body>
     <div class="overlay"></div>
     <header>
       <div class="menu-btn">
@@ -30,7 +30,7 @@
         </div>
 
         <ul class="menu-nav">
-          <li class="nav-item current">
+          <li class="nav-item">
             <a href="index.html" class="nav-link">
               Home
             </a>
@@ -40,7 +40,7 @@
               About Me
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item current">
             <a href="work.html" class="nav-link">
               My Work
             </a>
@@ -54,40 +54,44 @@
       </nav>
     </header>
 
-    <main id="home">
-      <div class="container">
-        <h1>
-          <p class="line anim-typewriter">
-            Hi, My name is <span class="line name">Haziq Hafizi</span>
-          </p>
-          <br />
-          <p class="line anim-iam">I am a</p>
-          <span
-            class="txt-type"
-            data-wait="3000"
-            data-words='["Developer.", "Designer.", "Creator."]'
-          ></span>
-        </h1>
-      </div>
+    <main id="work">
+      <h1 class="lg-heading">
+        Smart <span class="text-secondary">Walking Stick</span>
+      </h1>
+      <h2 class="sm-heading">
+        Check out some of my projects ....
+      </h2>
 
-      <div class="icons">
-        <a href="https://twitter.com/HazHafizi">
-          <i class="fab fa-twitter fa-2x"></i>
-        </a>
-        <a href="https://www.facebook.com/HazHafizi">
-          <i class="fab fa-facebook fa-2x"></i>
-        </a>
-        <a
-          href="https://www.linkedin.com/in/haziq-hafizi-bin-md-yusof-18037b145/"
-        >
-          <i class="fab fa-linkedin fa-2x"></i>
-        </a>
-        <a href="https://github.com/akiraro">
-          <i class="fab fa-github fa-2x"></i>
-        </a>
+      <div class="project-elem">
+        <div class="project-img">
+          <p>IMAGE GOES HERE</p>
+        </div>
+
+        <br />
+        <div class="project">
+          <div class="desc-title">
+            <h3>Description</h3>
+          </div>
+
+          <div class="project">
+            <h4>
+              This is a capstone project for fourth year computer engineering
+              student
+            </h4>
+            <h4>
+              Me and my team chose this idea because we want to help the
+              visually-impared individuals and improve the functionality of a
+              walking stick. This idea is to make an oridnary walking stack to
+              become smarter and much advanced
+            </h4>
+          </div>
+        </div>
       </div>
     </main>
 
-    <script src="js/index.js"></script>
+    <footer id="main-footer">
+      Copyright &copy; 2019
+    </footer>
+    <script src="js/main.js"></script>
   </body>
 </html>
