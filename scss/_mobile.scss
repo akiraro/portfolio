@@ -57,13 +57,6 @@
   }
 
   .about-info {
-    // grid-template-areas:
-    //   "bioimage"
-    //   "bio"
-    //   "job1"
-    //   "job2"
-    //   "job3";
-
     grid-template-areas:
       "topabout"
       "job1"
@@ -78,6 +71,10 @@
         "bio"
         "progbar";
       grid-template-columns: 1fr;
+    }
+
+    .bar-color-base {
+      font-size: 0.5rem;
     }
   }
 
@@ -94,5 +91,11 @@
 
   .projects {
     grid-template-columns: 1fr;
+  }
+
+  .project-elem {
+    .desc-title {
+      padding-left: 0px;
+    }
   }
 }

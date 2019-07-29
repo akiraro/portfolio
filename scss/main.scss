@@ -87,6 +87,7 @@ main {
   grid-template-columns: repeat(3, 1fr);
 
   .top-about {
+    animation: fadeIn 0.5s steps(40) 1 normal both;
     background: lighten($primary-color, 5);
     grid-area: topabout;
     display: grid;
@@ -140,24 +141,6 @@ main {
     animation: progressBar 1s steps(200) 0s 1 normal both;
   }
 
-  @keyframes progressBar {
-    0% {
-      width: 0;
-    }
-  }
-
-  @keyframes fade {
-    0% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
   .bio-image {
     grid-area: bioimage;
     margin: auto;
@@ -171,27 +154,17 @@ main {
     font-size: 1rem;
   }
 
-  .job-1 {
-    grid-area: job1;
-  }
-
-  .job-2 {
-    grid-area: job2;
-  }
-
-  .job-3 {
-    grid-area: job3;
-  }
-
-  .job-4 {
-    grid-area: job4;
-    text-align: center;
-  }
-
   .job {
+    animation: fadeIn 0.5s steps(40) 1 normal both;
     background: lighten($primary-color, 5);
     padding: 0.5rem;
     border-bottom: $secondary-color 5px solid;
+
+    &:hover {
+      color: $secondary-color;
+      opacity: 0.5;
+      @include easeOut();
+    }
 
     h3 {
       background: darken($primary-color, 5);
@@ -210,17 +183,67 @@ main {
       font-size: 13px;
     }
   }
+
+  .job-1 {
+    grid-area: job1;
+    animation-delay: 1s;
+  }
+
+  .job-2 {
+    grid-area: job2;
+    animation-delay: 1.5s;
+  }
+
+  .job-3 {
+    grid-area: job3;
+    animation-delay: 2s;
+  }
+
+  .job-4 {
+    grid-area: job4;
+    text-align: center;
+    animation-delay: 2.5s;
+  }
+
+  @keyframes progressBar {
+    0% {
+      width: 0;
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 }
 
 // Work / Projects
-
 .projects {
   display: grid;
   grid-gap: 0.7rem;
   grid-template-columns: repeat(3, 1fr);
 
+  .item #item-img {
+    position: relative;
+
+    h2 {
+      text-align: center;
+      font-weight: 3000;
+      position: absolute;
+      left: 50%;
+      top: -400%;
+      transform: translate(-50%, -50%);
+      text-shadow: 0 0 10px $secondary-color;
+    }
+  }
+
   img {
     width: 100%;
+    height: 200px;
     border: 3px #fff solid;
 
     &:hover {
@@ -229,6 +252,107 @@ main {
       @include easeOut;
     }
   }
+}
+
+// Projects Page
+.project-elem {
+  .project-img {
+    width: 100%;
+    height: 100%;
+    background: #333;
+  }
+
+  .project {
+    background: #333;
+  }
+
+  .desc-title {
+    width: 120px;
+    border-bottom: 1px solid $secondary-color;
+    padding-left: 10px;
+  }
+}
+
+.bg-modal1 {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  animation: fadeIn 0.5s steps(40) 1 normal both;
+  visibility: hidden;
+}
+
+.bg-modal2 {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  animation: fadeIn 0.5s steps(40) 1 normal both;
+  visibility: hidden;
+}
+
+.bg-modal3 {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  animation: fadeIn 0.5s steps(40) 1 normal both;
+  visibility: hidden;
+}
+
+.bg-modal4 {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  animation: fadeIn 0.5s steps(40) 1 normal both;
+  visibility: hidden;
+}
+
+.modal-content {
+  width: 700px;
+  height: 800px;
+  background-color: white;
+  border-radius: 4px;
+  text-align: center;
+  color: black;
+  font-size: 42px;
+  position: relative;
+
+  .modal-header {
+    padding-top: 20px;
+    color: white;
+    height: 100px;
+    background: $secondary-color;
+  }
+}
+
+.close,
+.close1,
+.close2,
+.close3,
+.close4 {
+  position: absolute;
+  top: 0;
+  right: 14px;
+  transform: rotate(45deg);
+  cursor: pointer;
 }
 
 // Contact Page
