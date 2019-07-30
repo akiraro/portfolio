@@ -40,33 +40,41 @@ function toggleMenu() {
 
 document.getElementById("work1btn").addEventListener("click", function() {
   document.querySelector(".bg-modal1").style.visibility = "visible";
+  document.querySelector(".modal-nav").style.visibility = "visible";
 });
 
 document.getElementById("work2btn").addEventListener("click", function() {
   document.querySelector(".bg-modal2").style.visibility = "visible";
+  document.querySelector(".modal-nav").style.visibility = "visible";
 });
 
 document.getElementById("work3").addEventListener("click", function() {
   document.querySelector(".bg-modal3").style.visibility = "visible";
+  document.querySelector(".modal-nav").style.visibility = "visible";
 });
 
 document.getElementById("work4").addEventListener("click", function() {
   document.querySelector(".bg-modal4").style.visibility = "visible";
+  document.querySelector(".modal-nav").style.visibility = "visible";
 });
 
 // Close button
 document.querySelector(".close1").addEventListener("click", function() {
   document.querySelector(".bg-modal1").style.visibility = "hidden";
+  document.querySelector(".modal-nav").style.visibility = "hidden";
 });
 
 document.querySelector(".close2").addEventListener("click", function() {
   document.querySelector(".bg-modal2").style.visibility = "hidden";
+  document.querySelector(".modal-nav").style.visibility = "hidden";
 });
 
 document.querySelector(".close3").addEventListener("click", function() {
   document.querySelector(".bg-modal3").style.visibility = "hidden";
+  document.querySelector(".modal-nav").style.visibility = "hidden";
 });
 
 document.querySelector(".close4").addEventListener("click", function() {
   document.querySelector(".bg-modal4").style.visibility = "hidden";
+  document.querySelector(".modal-nav").style.visibility = "hidden";
 });
