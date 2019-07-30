@@ -277,9 +277,10 @@ main {
 }
 
 .modal-nav {
-  position: absolute;
+  position: fixed;
   z-index: 11;
   top: 0;
+  height: 100%;
   width: 100%;
   display: flex;
   margin: 0;
@@ -333,6 +334,21 @@ main {
     color: white;
     height: 80px;
     background: darken($secondary-color, 20);
+  }
+  .work-info {
+    padding: 10px;
+
+    h2 {
+      text-align: left;
+      color: $secondary-color;
+      font-size: 1.9rem;
+    }
+
+    h3 {
+      text-align: left;
+      color: white;
+      font-size: 0.9rem;
+    }
   }
 }
 

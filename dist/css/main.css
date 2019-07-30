@@ -297,9 +297,10 @@ main {
   padding-left: 10px; }
 
 .modal-nav {
-  position: absolute;
+  position: fixed;
   z-index: 11;
   top: 0;
+  height: 100%;
   width: 100%;
   display: flex;
   margin: 0;
@@ -347,6 +348,16 @@ main {
     color: white;
     height: 80px;
     background: #129ba3; }
+  .modal-content .work-info {
+    padding: 10px; }
+    .modal-content .work-info h2 {
+      text-align: left;
+      color: #33dee8;
+      font-size: 1.9rem; }
+    .modal-content .work-info h3 {
+      text-align: left;
+      color: white;
+      font-size: 0.9rem; }
 
 .close,
 .close1,
@@ -405,7 +416,10 @@ main {
 
 @media screen and (min-width: 1171px) {
   .projects {
-    grid-template-columns: repeat(4, 1fr); } }
+    grid-template-columns: repeat(4, 1fr); }
+  .modal-content {
+    width: 600px;
+    height: 700px; } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .projects {
