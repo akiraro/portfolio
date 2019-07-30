@@ -48,12 +48,12 @@ document.getElementById("work2btn").addEventListener("click", function() {
   document.querySelector(".modal-nav").style.visibility = "visible";
 });
 
-document.getElementById("work3").addEventListener("click", function() {
+document.getElementById("work3btn").addEventListener("click", function() {
   document.querySelector(".bg-modal3").style.visibility = "visible";
   document.querySelector(".modal-nav").style.visibility = "visible";
 });
 
-document.getElementById("work4").addEventListener("click", function() {
+document.getElementById("work4btn").addEventListener("click", function() {
   document.querySelector(".bg-modal4").style.visibility = "visible";
   document.querySelector(".modal-nav").style.visibility = "visible";
 });
