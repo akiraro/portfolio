@@ -319,20 +319,21 @@ main {
 }
 
 .modal-content {
+  position: relative;
   width: 700px;
-  height: 800px;
+  height: auto;
   background-color: $primary-color;
   border-radius: 4px;
   text-align: center;
   color: black;
   font-size: 42px;
-  position: relative;
   opacity: 0.95;
 
   .modal-header {
     padding-top: 10px;
     color: white;
     height: 80px;
+    border-radius: 4px;
     background: darken($secondary-color, 20);
   }
   .work-info {
